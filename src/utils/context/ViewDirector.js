@@ -3,7 +3,7 @@ import { useAuth } from './authContext';
 import Loading from '../../components/Loading';
 import NavBar from '../../components/NavBar';
 import RegisterForm from '../../components/RegisterForm';
-import Signin from '../../components/Signin';
+import TheSignin from '../../components/Signin';
 
 const ViewDirectorBasedOnUserAuthStatus = ({ component: Component, pageProps }) => {
   const { user, userLoading, updateUser } = useAuth();
@@ -23,7 +23,7 @@ const ViewDirectorBasedOnUserAuthStatus = ({ component: Component, pageProps }) 
     );
   }
 
-  return <Signin />;
+  return <TheSignin />;
 };
 
 export default ViewDirectorBasedOnUserAuthStatus;
