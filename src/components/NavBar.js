@@ -1,12 +1,7 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable object-curly-newline */
 import React from 'react';
 import Link from 'next/link';
-import {
-  Navbar,
-  Container,
-  Nav,
-  Button,
-} from 'react-bootstrap';
+import { Navbar, Container, Nav, Button } from 'react-bootstrap';
 import Image from 'next/image';
 import { signOut } from '../utils/auth';
 
@@ -14,13 +9,7 @@ export default function NavBar() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Image
-          alt=""
-          src="/images/Nav-Logo.jpg"
-          width="30"
-          height="30"
-          className="d-inline-block align-top"
-        />
+        <Image alt="" src="/images/Nav-Logo.jpg" width="30" height="30" className="d-inline-block align-top" />
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
