@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../styles/globals.css';
-import { AuthProvider } from '../utils/context/authContext';
+import '../src/styles/globals.css';
+import { AuthProvider } from '../src/utils/context/authContext';
 // import ViewDirectorBasedOnUserAuthStatus from '../utils/ViewDirector';
-import NavBar from '../components/NavBar';
+import NavBar from '../src/components/NavBar';
 
 function MyApp() {
   // Put these back in the MyApp function when we want to do auth
