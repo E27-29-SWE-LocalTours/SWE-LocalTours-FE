@@ -2,20 +2,25 @@
 import React from 'react';
 import Link from 'next/link';
 import {
-  Navbar, //
+  Navbar,
   Container,
   Nav,
   Button,
 } from 'react-bootstrap';
+import Image from 'next/image';
 import { signOut } from '../utils/auth';
 
 export default function NavBar() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Link passHref href="/">
-          <Navbar.Brand>CHANGE ME</Navbar.Brand>
-        </Link>
+        <Image
+          alt=""
+          src="/images/Nav-Logo.jpg"
+          width="30"
+          height="30"
+          className="d-inline-block align-top"
+        />
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
@@ -23,9 +28,20 @@ export default function NavBar() {
             <Link passHref href="/">
               <Nav.Link>Home</Nav.Link>
             </Link>
-            <Link passHref href="/delete-me">
-              <Nav.Link>Delete Me</Nav.Link>
+            <Link passHref href="/tours">
+              <Nav.Link>Tours</Nav.Link>
             </Link>
+            <Link passHref href="/locations">
+              <Nav.Link>Locations</Nav.Link>
+            </Link>
+            <Link passHref href="/itinerary">
+              <Nav.Link>Your Itinerary</Nav.Link>
+            </Link>
+            <Link passHref href="/profile">
+              <Nav.Link>Profile</Nav.Link>
+            </Link>
+          </Nav>
+          <Nav className="ms-auto">
             <Button variant="danger" onClick={signOut}>
               Sign Out
             </Button>
